@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="hero text-light bg-dark ">
+    <div class="hero bg-dark text-light">
         <div class="container">
             <h1 class="text-center">Billing system</h1>
 
@@ -35,24 +35,24 @@
                     </form>
                 </div>
                 <div class="col-6">
-                    <table class="table table-stripped mt-5 text-light">
-                        <thead>
-                            <tr>
-                                <th>items</th>
-                                <th>price</th>
-                                <th>quantity</th>
-                            </tr>
-                        </thead>
-            
-                       <tbody id="item-list"></tbody>
-                    </table>
+                   
+                    <div class="items-div">
+                        
+                       
+                        
+                    </div>
                     <div class="d-flex align-items-center justify-content-between">
-                        <div class="total"></div>
-                        <button type="button" class="btn btn-success generate">generate invoice</button>
+                        <div class="total bg-danger p-sm-3 px-4 "></div>
+                        <button type="button" class="btn btn-success generate p-sm-3 px-4 mx-sm-0 mx-4">generate invoice</button>
                     </div>
                 </div>
             </div>
         </div>
+
+       
+    </div>
+    <div class="loader-div">
+        <div class="loader" id="loadingCircle"></div>
     </div>
     </div>
     
@@ -71,8 +71,10 @@
 </head>
 <body>
     <div class="invoice">
-        <h1>CASH SALES INVOICE</h1>
-        <p>Dealers in all kinds of Goods</p>
+        <div class="invoice-header">
+            <h1>CASH SALES INVOICE</h1>
+            <p>Dealers in all kinds of Goods</p>
+        </div>
         <div class="info">
             <div class="info-inner">
                 <p>Company's Name:</p>
@@ -91,14 +93,13 @@
 
             <div class="info-inner">
                 <p>Date:</p>
-                <p class="owner"></p>
+                <p class="owner" id="date"></p>
             </div>
         </div>
 
         <table class="content-table">
             <thead>
                 <tr>
-                    <th>S/N</th>
                     <th>ITEM</th>
                     <th>PRICE</th>
                     <th>QUANTITY</th>
@@ -108,5 +109,7 @@
 
             <tbody class="invoice-body"></tbody>
         </table>
+
+        <div class="total-invoice"></div>
 </body>
 </html>
